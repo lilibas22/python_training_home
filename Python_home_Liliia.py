@@ -10,7 +10,7 @@ def is_alert_present(wd):
     except:
         return False
 
-class (unittest.TestCase):
+class Python_home_Liliia(unittest.TestCase):
     def setUp(self):
         self.wd = WebDriver(capabilities={"marionette": False})
         self.wd.implicitly_wait(60)
