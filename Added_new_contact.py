@@ -25,17 +25,6 @@ class Added_new_contact(unittest.TestCase):
                          address2="Miami", phone2="785269555", notes="Notes here"))
         self.logout(wd)
 
-    def test_Added_new_empty_contact(self):
-        success = True
-        wd = self.wd
-        self.open_home_page(wd)
-        self.login(wd, username="admin", password="secret")
-        self.new_contact(wd, Contact(firstname="", middlename="", lastname="", nickname="", photo="",
-                         title="", company="", address="", homenumber="",
-                         mobile="", worknumber="", fax="", website="",
-                         email="", byear="", ayear="",
-                         address2="", phone2="", notes=""))
-        self.logout(wd)
 
     def logout(self, wd):
         wd.find_element_by_link_text("Logout").click()
