@@ -8,7 +8,7 @@ class Application:
            self.wd = WebDriver(firefox_binary="C:/Program Files/Mozilla Firefox/firefox.exe")
            self.wd.implicitly_wait(60)
            self.session = SessionHelper(self)
-           self.group = GroupHelper
+           self.group = GroupHelper(self)
 
     def open_home_page(self):
         wd = self.wd
