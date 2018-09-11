@@ -7,3 +7,4 @@ def test_Added_new_contact(app):
                          mobile="987654321", worknumber="678901234", fax="123123123", website="www.pitt.com", email="test1@test.com", byear="1989", ayear="1900",
                          address2="Miami", phone2="785269555", notes="Notes here"))
     app.session.logout()
+
