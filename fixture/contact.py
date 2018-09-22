@@ -74,7 +74,8 @@ class ContactHelper:
     def edit_contact(self, edit_contact):
         # edit first contact
         wd = self.app.wd
-        wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
+        if not (wd.current_url.endswith("/edit.php") and len(wd.find_elements_by_name("update")) > 0):
+            wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
         wd.find_element_by_name("firstname").send_keys(edit_contact.firstname)
